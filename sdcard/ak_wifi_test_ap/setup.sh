@@ -2,7 +2,7 @@
 mkdir -pv /tmp/sd
 mount -t vfat /dev/mmcblk0p1 /tmp/sd 2> /dev/null
 echo "sd-card setup.sh started." >/tmp/sd/out.log
-/sbin/telnetd -l /tmp/sh -p 23232 2>&1 >>/tmp/sd/out.log
+/sbin/telnetd -l /bin/sh -p 23232 2>&1 >>/tmp/sd/out.log
 # --- copying the "rest" of service.sh ---
 cp -av /usr/local/venc.cfg /etc/jffs2 >> /tmp/sd/out.log
 cp -v /usr/local/factory_cfg.ini /etc/jffs2/anyka_cfg.ini >> /tmp/sd/out.log
